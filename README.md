@@ -24,7 +24,7 @@ Run docker as priveled in order to grant access to all devices on host
 docker run -ti --privileged --cap-add=ALL -v /dev:/dev ubuntu:18.04 bash
 cat /proc/1/status |grep Cap
 apt update && apt install kmod -y
-lsmod lkm_example
+lsmod |grep lkm_example
 rmmod lkm_example
 ```
 
